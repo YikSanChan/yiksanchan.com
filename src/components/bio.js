@@ -25,9 +25,10 @@ const Bio = () => {
         siteMetadata {
           author {
             name
-            summary
           }
           social {
+            github
+            stackoverflow
             twitter
           }
         }
@@ -57,11 +58,12 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+        我是{author.name}，在 <a href={`https://code.tubitv.com/`}>Tubi</a> 用 Akka 搭建 ad server。
+        我活跃在{` `}
+        <a href={`https://github.com/${social.github}`}>Github</a>，
+        <a href={`https://stackoverflow.com/users/${social.stackoverflow}`}>Stack Overflow</a> 和{` `}
+        <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>。
+        Akka 是我分布式系统的启蒙，我将在本博客中记录有关 Akka 的一些思考。
       </p>
     </div>
   )
