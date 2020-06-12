@@ -3,7 +3,7 @@ module.exports = {
     title: `Akka Aha`,
     author: {
       name: `陈易生`,
-      summary: `I build ad server at Tubi.`,
+      email: `evan.chanyiksan@gmail.com`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,

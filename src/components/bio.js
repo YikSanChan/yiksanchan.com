@@ -25,6 +25,7 @@ const Bio = () => {
         siteMetadata {
           author {
             name
+            email
           }
           social {
             github
@@ -63,7 +64,7 @@ const Bio = () => {
         <a href={`https://github.com/${social.github}`}>Github</a>、
         <a href={`https://stackoverflow.com/users/${social.stackoverflow}`}>Stack Overflow</a>和
         <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>。
-        Akka是我分布式系统的启蒙，我将在本博客中记录有关Akka的一些思考。
+        Akka是我分布式系统的启蒙，我将在本博客中记录有关Akka的一些思考。欢迎邮件联络：{author.email}。
       </p>
     </div>
   )
