@@ -39,8 +39,8 @@ akka-actor模块是Akka的核心和灵魂，它是所有其它模块和功能的
 本质上，它实现了actor模型，而不涉及任何remoting、cluster awareness、persistence等概念。
 
 有趣的是，Jonas Bonér曾经告诉我，remoting永远不会脱离[Akka actors](https://blog.codecentric.de/en/2015/08/introduction-to-akka-actors/)
-而成为一个独立的模块，然而如你所见，事情是会改变的。
-(译者注：见[akka-remote](https://github.com/akka/akka/tree/master/akka-remote/src) 模块)
+而成为一个独立的模块，然而如你所见，事情是会改变的
+(译者注：见[akka-remote](https://github.com/akka/akka/tree/master/akka-remote/src) 模块)。
 不过，分布式的设计在Akka actors保留了下来。
 在Akka中，所有的东西默认都是分布式的。
 这种设计直面了网络的古怪之处。
@@ -102,7 +102,7 @@ akka {
 }
 ```
 
-你只需要配置RemoteActorRefProvider。(译者注：在最新版本的Akka中，只需设为`cluster`即可)
+你只需要配置RemoteActorRefProvider(译者注：在最新版本的Akka中，只需设为`cluster`即可)。
 这允许你在远程actor系统上部署actor，(并对远程actor进行)远程死亡观察、故障检测等。
 虽然这很棒，但大多数场景下它太底层了，因为它需要确切知道正在协作的actor系统的远程地址。
 
@@ -137,7 +137,7 @@ Akka Persistence也支持快照，避免因事件过多而导致复原耗时过�
 
 ## Akka Streams and Akka HTTP
 
-Akka Streams和Akka HTTP是实验性的模块，还不是"官方"Akka发行版的一部分。(译者注：现在这两个模块已经十分成熟，属于Akka官方发行版的一部分)
+Akka Streams和Akka HTTP是实验性的模块，还不是"官方"Akka发行版的一部分(译者注：现在这两个模块已经十分成熟，属于Akka官方发行版的一部分)。
 
 Reactive Streams约定如何通过非阻塞的back pressure来解决异步流处理中的问题。
 Akka Streams、Reactor、RxJava、Slick和Vert.x是[Reactive Streams](http://www.reactive-streams.org/)的不同实现。
