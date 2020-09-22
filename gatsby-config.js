@@ -5,6 +5,7 @@ module.exports = {
       name: `Yik San Chan`,
       email: `evan.chanyiksan@gmail.com`,
     },
+    siteUrl: `https://yiksanchan.com`,
     description: `Materialized thinkings on Akka and AdServer, by Yik San Chan`,
     social: {
       github: `yiksanchan`,
