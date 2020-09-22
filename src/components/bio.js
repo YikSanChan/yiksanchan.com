@@ -27,17 +27,14 @@ const Bio = () => {
             name
             email
           }
-          social {
-            github
-            stackoverflow
-            twitter
-          }
+          description
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author, description } = data.site.siteMetadata
+
   return (
     <div
       style={{
@@ -58,14 +55,7 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        我是{author.name}，在<a href={`https://code.tubitv.com/`}>Tubi</a>用Scala和Akka搭建ad server。
-        我活跃在
-        <a href={`https://github.com/${social.github}`}>Github</a>、
-        <a href={`https://stackoverflow.com/users/${social.stackoverflow}`}>Stack Overflow</a>和
-        <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>。
-        Akka是我分布式系统的启蒙，我将在本博客中记录有关Akka的一些思考。欢迎邮件联络：{author.email}。
-      </p>
+      <p>{description}</p>
     </div>
   )
 }

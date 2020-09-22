@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Akka Aha`,
+    title: `Materialized`,
     author: {
-      name: `陈易生`,
+      name: `Yik San Chan`,
       email: `evan.chanyiksan@gmail.com`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Materialized thinkings on Akka and AdServer, by Yik San Chan`,
     social: {
       github: `yiksanchan`,
       stackoverflow: 7550592,
