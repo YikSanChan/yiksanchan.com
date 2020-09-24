@@ -1,7 +1,7 @@
 ---
 title: A Map of Akka
 date: "2020-06-12"
-description: A Map of Akka by Heiko Seeberger 译文
+description: 译文。Akka各模块之间究竟是个什么关系？
 ---
 
 **译者的话**
