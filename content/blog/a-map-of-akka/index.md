@@ -16,8 +16,6 @@ Heiko是Akka的早期贡献者，也是Scala社区的重要贡献者。
 本文的翻译得到了Heiko的同意，我在此特意感谢他对我的帮助，祝他能带队把Cloudstate做成功。
 翻译大幅借助于[DeepL Translate](https://www.deepl.com/en/translator)，感谢这个工具。
 
-Heiko, thanks for always helping me with Akka. Happy Hakking!
-
 ---
 
 [actor模型](https://en.wikipedia.org/wiki/Actor_model)已被证明能提供六个九(99.9999%)及以上的可用性。
