@@ -1,7 +1,7 @@
 ---
-title: Accelerating Ad Product Development at Twitter
+title: Twitter广告之“道”
 date: "2020-08-11"
-description: 译文。Twitter如何完成对单体AdServer的微服务化拆分？
+description: Accelerating Ad Product Development at Twitter译文。Twitter如何完成对单体AdServer的微服务化拆分？
 ---
 
 **译者的话**
