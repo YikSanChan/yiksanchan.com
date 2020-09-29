@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react"
 
-import { rhythm } from '../utils/typography';
+import { rhythm } from "../utils/typography"
 
 class Footer extends React.Component {
   render() {
@@ -17,8 +17,8 @@ class Footer extends React.Component {
           rel="noopener noreferrer"
         >
           github
-        </a>{' '}
-        &bull;{' '}
+        </a>{" "}
+        &bull;{" "}
         <a
           href="https://stackoverflow.com/users/7550592/yik-san-chan"
           target="_blank"
@@ -27,8 +27,8 @@ class Footer extends React.Component {
           stack overflow
         </a>
       </footer>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
