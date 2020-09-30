@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Materialized`,
+    title: `陈易生的技术博客`,
     author: {
       name: `Yik San Chan`,
       email: `evan.chanyiksan@gmail.com`,
     },
     siteUrl: `https://yiksanchan.com`,
-    description: `Hi，我是陈易生，我在这里记录关于Akka和广告系统的思考。`,
+    description: `Hi，我是陈易生，目前在 Tubi 用 Akka 搭建广告系统。我会在博客中记录我对广告系统和 Akka 的一些思考 :)`,
     social: {
       github: `yiksanchan`,
       stackoverflow: 7550592,

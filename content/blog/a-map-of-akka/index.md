@@ -1,7 +1,7 @@
 ---
-title: Akka导图
+title: Akka 导图
 date: "2020-06-12"
-description: A Map of Akka译文。Akka各模块之间究竟是个什么关系？
+description: A Map of Akka 译文。Akka 各模块之间究竟是个什么关系？
 ---
 
 **译者的话**
