@@ -18,6 +18,9 @@ Heiko 是 Akka 的早期贡献者，也是 Scala 社区的重要贡献者。
 
 ---
 
+```toc
+```
+
 [actor 模型](https://en.wikipedia.org/wiki/Actor_model)已被证明能提供六个九(99.9999%)及以上的可用性。
 Jonas Bonér(译者注：Lightbend 的创始人和 CTO)在 2009 年启动[Akka 项目](https://akka.io/)，想把 actor 模型带到 JVM。
 Akka 是开源的，使用 Apache 2 许可，提供 Java 和 Scala 的 API。

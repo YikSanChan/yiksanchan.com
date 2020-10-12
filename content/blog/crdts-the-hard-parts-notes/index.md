@@ -8,11 +8,15 @@ Designing Data-Intensive Applications (DDIA) 的作者 Martin Kleppmann 目前�
 
 ---
 
-# 协同软件与收敛算法
+```toc
+# This code block gets replaced with the TOC
+```
+
+## 协同软件与收敛算法
 
 包括 Google Docs、Figma、Trello 在内的协同编辑软件，需要依赖收敛算法（convergence algorithms）使得不同节点上发生的修改可以确定地（deterministically）合并到一致的状态。最常见的收敛算法有两类：OT（Operational Transformation）和 CRDT（Conflict-free replicated data type）。
 
-# 收敛算法之 OT
+## 收敛算法之 OT
 
 首先以 Google Docs 为例介绍 OT。server 会接收不同节点的写，按照规则调整插入的 offset，例如，将"insert ! at position 4"按照一定的规则调整为"insert ! at position 5"。
 
@@ -22,7 +26,7 @@ OT 的关键在于使用 server 统筹不同节点的写。OT 保证了只要两
 
 下面介绍 CRDTs 有关的四项研究进展。
 
-# CRDTs: Interleaving anomalies
+## CRDTs: Interleaving anomalies
 
 方案一：给新插入的字母分配一个位于[0,1]的数字。
 
@@ -52,7 +56,7 @@ OT 的关键在于使用 server 统筹不同节点的写。OT 保证了只要两
 
 方案三：在 RGA 的基础上进行修改，杜绝了任何 interleaving 的出现，见论文 [Interleaving anomalies in collaborative text editors](https://martin.kleppmann.com/papers/interleaving-papoc19.pdf)。
 
-# CRDTs: Moving list items
+## CRDTs: Moving list items
 
 许多 CRDTs 都实现了 List 数据结构，但不支持 move 操作。用户可以把 move 拆解为 delete-then-insert。但是会发生下面的 anomaly。
 
@@ -82,7 +86,7 @@ pos("phone joe") := "head of the list"
 
 目前还没有很好解决办法。详细讨论见论文 [Moving Elements in List CRDTs](https://martin.kleppmann.com/papers/list-move-papoc20.pdf)。
 
-# CRDTs: Moving subtrees of a tree
+## CRDTs: Moving subtrees of a tree
 
 在一棵树内移动子树也是个很 tricky 的问题，但是这样的场景比较常见，例如文件系统就是一棵树。下面的场景有 4 种 move 结果：a 有重复，不好。b 不再是棵树，不好。c 和 d 都可以，都忽略掉其中一个 move。
 
@@ -140,7 +144,7 @@ Martin 还证明了 move 操作是 commutative 的，即 `applyOps(ops1) == appl
 
 详细讨论见论文 [A highly-available move operation for replicated trees and distributed filesystems](https://martin.kleppmann.com/papers/move-op.pdf)。
 
-# CRDTs: Reducing metadata overhead
+## CRDTs: Reducing metadata overhead
 
 上面提到，为了完成 undo 和 redo，CRDT 需要存储很大的 metadata。在下面这个例子中，真正的文本才占 1 字节，各种 metadata 就好几十字节。
 
@@ -169,10 +173,10 @@ Martin 开始介绍 [automerge](https://github.com/automerge/automerge) 项目�
 
 ![crdt columnar encoding](./crdt-columnar-encoding.png)
 
-# 总结
+## 总结
 
 CRDTs 的研究一直在快速推进，但目前还主要停留在原型（prototype）阶段，欢迎大家多多使用 CRDTs 搭建应用。
 
-# 参考文献
+## 参考文献
 
 讲义、视频、参考文献请参见[信息页](https://martin.kleppmann.com/2020/07/06/crdt-hard-parts-hydra.html)。

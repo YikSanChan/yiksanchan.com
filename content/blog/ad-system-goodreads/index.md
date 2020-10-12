@@ -4,7 +4,10 @@ date: "2020-09-29"
 description: 博采众长。
 ---
 
-# Building a real-time user action counting system for ads
+```toc
+```
+
+## Building a real-time user action counting system for ads
 
 原文：[https://medium.com/pinterest-engineering/building-a-real-time-user-action-counting-system-for-ads-88a60d9c9a](https://medium.com/pinterest-engineering/building-a-real-time-user-action-counting-system-for-ads-88a60d9c9a)
 

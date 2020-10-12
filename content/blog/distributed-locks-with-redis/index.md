@@ -4,7 +4,11 @@ date: "2020-10-26"
 description: Redis 分布式锁相关文档的梳理。
 ---
 
-# 分布式锁
+```toc
+# This code block gets replaced with the TOC
+```
+
+## 分布式锁
 
 在多线程共享内存数据的场景下，一个线程为了获得对数据的排他（exclusive）访问，通常先获取（acquire）锁，随后进行对数据的操作，最后释放（release）锁。而在多客户端（clients）共享数据的场景下，一个客户端为了获得对数据的排他访问，需要进行类似的操作。由于在第二个场景中，客户端之间、客户端和数据之间都可能位于通过网络进行通信的不同节点上，具有分布式的性质，因此在该场景下进行的锁机制被称为分布式锁。
 
@@ -16,7 +20,7 @@ Redis 作者认为分布式锁应该同时保证 safety 和 liveness。
 
 [Redis 文档](https://redis.io/topics/distlock)探讨了两种分布式锁的实现，两种方案都需要客户端和服务器端 Redis 集群进行配合。
 
-# 基于复制的实现
+## 基于复制的实现
 
 在服务器端，维护多个 Redis 节点，其中一个节点为主（leader）节点，其余为从（follower）节点。主节点接收写，并异步地将写复制到从节点上。主节点下线后，任命其中一个仍在线的从节点作为新的主节点，继续接收写。
 
@@ -57,7 +61,7 @@ client2> SET resource-name token2 NX EX 100
 OK
 ```
 
-# Redlock
+## Redlock
 
 在服务器端，维护 N 个 Redis 主节点。每个节点互相独立，且均不设副本。
 
@@ -78,11 +82,11 @@ OK
 - Liveness A：无死锁是较为显然的结果。对于某个 key，由于它有时限，因此在足够长的时间后，所有节点上的这个 key 都会失效，该 key 对应的锁可以被重新获取。
 - Liveness B：容错也是较为显然的结果。
 
-# 总结
+## 总结
 
 Redis 作者认为 Redlock 比基于复制的分布式锁实现更安全，但我有些疑惑，因为我并没有看出这一点。[Martin Kleppmann](https://martin.kleppmann.com/) 撰文 [How to do distributed locking](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html) 认为 Redlock 其实并不安全，部分回答了我的疑惑，推荐大家阅读。
 
-# 参考文献
+## 参考文献
 
 - Redis 分布式锁文档：[https://redis.io/topics/distlock](https://redis.io/topics/distlock)
 - Redis SET 命令文档：[https://redis.io/commands/set#patterns](https://redis.io/commands/set#patterns)
