@@ -66,7 +66,7 @@ OT 的关键在于使用 server 统筹不同节点的写。OT 保证了只要两
 
 ```go
 merge(pos("phone joe") := "head of the list", pos("phone joe") := "after buy milk"))
-==
+=>
 pos("phone joe") := "head of the list"
 ```
 
