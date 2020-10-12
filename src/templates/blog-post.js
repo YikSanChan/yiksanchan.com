@@ -5,16 +5,11 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import { DiscussionEmbed } from "disqus-react"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: post.id, title: post.frontmatter.title },
-  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -43,7 +38,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <DiscussionEmbed {...disqusConfig} />
+
+        <section id="comments">
+          <h4>
+            <a href="">评论区</a>
+          </h4>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<script src="https://utteranc.es/client.js"
+                    repo="YikSanChan/yiksanchan.com"
+                    issue-term="pathname"
+                    label="comments"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>`,
+            }}
+          />
+        </section>
         <hr
           style={{
             marginBottom: rhythm(1),
