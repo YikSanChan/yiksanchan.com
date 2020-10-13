@@ -172,3 +172,7 @@ Martin 开始介绍 [automerge](https://github.com/automerge/automerge) 项目�
 # 总结
 
 CRDTs 的研究一直在快速推进，但目前还主要停留在原型（prototype）阶段，欢迎大家多多使用 CRDTs 搭建应用。
+
+# 参考文献
+
+讲义、视频、参考文献请参见[信息页](https://martin.kleppmann.com/2020/07/06/crdt-hard-parts-hydra.html)。
