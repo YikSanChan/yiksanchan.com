@@ -40,9 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <section id="comments">
-          <h4>
-            <a href="">评论区</a>
-          </h4>
+          <h4>讨论区。若无内容，请刷新。</h4>
           <div
             dangerouslySetInnerHTML={{
               __html: `<script src="https://utteranc.es/client.js"
