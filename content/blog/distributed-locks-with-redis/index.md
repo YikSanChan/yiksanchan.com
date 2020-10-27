@@ -1,7 +1,7 @@
 ---
 title: 用 Redis 实现分布式锁
 date: "2020-10-26"
-description: 如何用 Redis 实现分布式锁？
+description: Redis 分布式锁相关文档的梳理。
 ---
 
 # 分布式锁
@@ -14,7 +14,7 @@ Redis 作者认为分布式锁应该同时保证 safety 和 liveness。
 2. Liveness A：无死锁。即便持有锁的客户端宕机或发生网络分区（network partition），客户端最终（eventually）仍有可能获取锁。
 3. Liveness B：容错。只要 Redis 集群中的大多数节点仍在线，客户端就可以获取和释放锁。
 
-[Redis 文档](https://redis.io/topics/distlock) 探讨了两种分布式锁的实现，两种方案都需要客户端和服务器端 Redis 集群进行配合。
+Redis 文档探讨了两种分布式锁的实现，两种方案都需要客户端和服务器端 Redis 集群进行配合。
 
 # 基于复制的实现
 
