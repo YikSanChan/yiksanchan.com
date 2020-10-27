@@ -1,5 +1,5 @@
 ---
-title: 用Redis实现分布式锁
+title: 用 Redis 实现分布式锁
 date: "2020-10-26"
 description: 如何用 Redis 实现分布式锁？
 ---
