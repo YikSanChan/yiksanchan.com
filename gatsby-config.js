@@ -50,7 +50,7 @@ module.exports = {
               tight: true,
               fromHeading: 2,
               toHeading: 6,
-              className: "table-of-contents"
+              className: "table-of-contents",
             },
           },
           `gatsby-remark-autolink-headers`,

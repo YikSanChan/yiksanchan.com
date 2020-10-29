@@ -19,6 +19,7 @@ Heiko 是 Akka 的早期贡献者，也是 Scala 社区的重要贡献者。
 ---
 
 ```toc
+
 ```
 
 [actor 模型](https://en.wikipedia.org/wiki/Actor_model)已被证明能提供六个九(99.9999%)及以上的可用性。

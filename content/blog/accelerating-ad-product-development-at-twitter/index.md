@@ -11,6 +11,7 @@ description: Accelerating Ad Product Development at Twitter 译文。Twitter 如
 ---
 
 ```toc
+
 ```
 
 康威定律指出，"组织的架构决定系统的架构"。Twitter 广告团队也不例外。2010 年，广告团队有约 15 名工程师和 2800 万美元的收入，到了 2019 年，团队增长至数百名工程师，有约 34 亿美元的收入。期间，Twitter 广告系统的功能和复杂性一直在增加，而团队或服务的运营模式并没有大幅改变。
